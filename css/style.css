@@ -1,0 +1,267 @@
+html {
+  font-size: 18px;
+  font-family: "Moirai One", cursive;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  margin-top: 2rem;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+* {
+  color: #000000;
+  list-style: none;
+  font-weight: normal;
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+.title {
+  width: 100vw;
+}
+.title .titleimage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+}
+.title .titleimage img {
+  width: 100vw;
+  margin-bottom: 1.5rem;
+}
+
+.animated-title {
+  position: fixed;
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.animated-title .track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  -webkit-animation: flow 30s linear infinite;
+          animation: flow 30s linear infinite;
+}
+.animated-title .track .flowtext {
+  color: #2CE6FF;
+  font-weight: bolder;
+}
+
+#container {
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#container .contents {
+  -webkit-animation: bounce 1s infinite alternate backwards;
+          animation: bounce 1s infinite alternate backwards;
+  font-weight: bolder;
+  background: rgba(255, 255, 255, 0.6941176471);
+  z-index: 100;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+#container .contents h1 {
+  transition: 0.2s;
+  margin: 1rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+#container .contents h1 a:hover {
+  color: #ffffff;
+}
+#container .contents .box {
+  display: none;
+  border-top: 2px solid #000000;
+  margin: 1rem;
+}
+#container .contents .box .img {
+  position: relative;
+  padding: 2rem;
+}
+#container .contents .box .img img {
+  border-radius: 10000px;
+  -webkit-animation: rotate 25s infinite linear forwards 0.2s;
+          animation: rotate 25s infinite linear forwards 0.2s;
+  width: 100%;
+}
+#container .contents .box .img-title {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+}
+#container .contents .box p {
+  margin: 0.5rem;
+  text-align: left;
+}
+#container .contents .box p a {
+  font-size: inherit;
+  transition: 0.2s;
+}
+#container .contents .cir {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+#container .contents:nth-child(1) {
+  -webkit-animation: bounce2 1s infinite alternate backwards 0.6s;
+          animation: bounce2 1s infinite alternate backwards 0.6s;
+}
+#container .contents:nth-child(3) {
+  -webkit-animation: bounce2 1s infinite alternate backwards 0.5s;
+          animation: bounce2 1s infinite alternate backwards 0.5s;
+}
+#container .contents:nth-child(4) {
+  -webkit-animation: bounce 1s infinite alternate backwards 0.2s;
+          animation: bounce 1s infinite alternate backwards 0.2s;
+}
+#container .contents:nth-child(6) {
+  -webkit-animation: bounce2 1s infinite alternate backwards 1s;
+          animation: bounce2 1s infinite alternate backwards 1s;
+}
+#container .contents:nth-child(8) {
+  -webkit-animation: bounce 2s infinite alternate backwards 0.3s;
+          animation: bounce 2s infinite alternate backwards 0.3s;
+}
+#container .contents:nth-child(10) {
+  -webkit-animation: bounce 1.5s infinite alternate backwards 0.2s;
+          animation: bounce 1.5s infinite alternate backwards 0.2s;
+}
+#container .contents:nth-child(8) {
+  -webkit-animation: bounce 2s infinite alternate backwards 0.3s;
+          animation: bounce 2s infinite alternate backwards 0.3s;
+}
+#container .contents:hover {
+  transition: 0.1s;
+  background: rgba(44, 230, 255, 0.5960784314);
+  cursor: pointer;
+  -webkit-animation: none;
+          animation: none;
+}
+#container .contents:hover .box {
+  display: flex;
+  flex-direction: column;
+}
+#container .contents:hover h1 {
+  filter: none;
+  margin: 1rem;
+}
+#container .contents:hover .img {
+  padding-top: 1.5rem;
+}
+
+@-webkit-keyframes flow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes flow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (hover: hover) and (min-width: 70px) {
+  .animated-title .flowtext {
+    transform: translateY(calc(100% - 7rem));
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+@keyframes bounce {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+@-webkit-keyframes bounce2 {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+@keyframes bounce2 {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+@media screen and (max-width: 1024px) {
+  * {
+    font-size: 16px;
+  }
+  #container .contents {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 550px) {
+  * {
+    font-size: 14px;
+    -webkit-animation: none;
+            animation: none;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .animated-title {
+    display: none;
+  }
+  #title {
+    position: relative;
+  }
+  #container .contents {
+    width: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */
