@@ -24,10 +24,7 @@ a {
     cursor: pointer;
 }
 
-.title {
-    // font-family: 'Palette Mosaic', cursive;
 
-    width: 100vw;
     .titleimage{
         width: 100vw;
         height: 100vh;
@@ -35,9 +32,10 @@ a {
         position: fixed;
         img {
             width: 100vw;
-            margin-bottom: 1.5rem;
+            height: 95vh;
+            margin-top: -1rem;
         }
-    }
+
     
     // justify-content: center;
     // align-items: center;

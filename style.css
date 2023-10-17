@@ -24,18 +24,16 @@ a {
   cursor: pointer;
 }
 
-.title {
-  width: 100vw;
-}
-.title .titleimage {
+.titleimage {
   width: 100vw;
   height: 100vh;
   display: flex;
   position: fixed;
 }
-.title .titleimage img {
+.titleimage img {
   width: 100vw;
-  margin-bottom: 1.5rem;
+  height: 95vh;
+  margin-top: -1rem;
 }
 
 .animated-title {
